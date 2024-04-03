@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import { IoMdSearch } from "react-icons/io";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import DarkMode from './DarkMode'
+
 
 
 const MenuLinks = [
@@ -44,7 +45,28 @@ const DropdownLinks = [
     link: "/#",
   },
 ];
+
+const OpenLinks = [
+  {
+  id: 1,
+  name: "Profile",
+  link:"/#"
+},
+{
+  id: 2,
+  name: "Settings",
+  link:"/#"
+},
+{
+  id: 3,
+  name: "Sign Out",
+  link:"/#"
+},
+]
+
+
 const Navbar = ({ handleOrderPopup }) => {
+  const [open,setOpen] =useState(false)
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       <div className="py-4">
@@ -105,9 +127,9 @@ const Navbar = ({ handleOrderPopup }) => {
           </div>
 
           {/* Navbar Right section */}
-          <div className="flex justify-between items-center gap-4">
+          <div className="flex justify-between items-center gap-2">
             {/* Search Bar section */}
-            <div className="relative group hidden sm:block">
+            <div className="relative group hidden sm:block ">
               <input
                 type="text"
                 placeholder="Search"
@@ -119,16 +141,38 @@ const Navbar = ({ handleOrderPopup }) => {
             </div>
 
             {/* Order-button section */}
-            <button className="relative p-3" onClick={handleOrderPopup}>
+            <button className="relative p-3 mr-4" onClick={handleOrderPopup}>
               <FaCartShopping className="text-xl text-gray-600 dark:text-gray-400" />
               <div className="w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs">
                 4
               </div>
             </button>
+          
+
             {/* Dark Mode section */}
-            <div>
+            <div className="mr-4 ">
               <DarkMode />
             </div>
+            <div className="relative cursor-pointer group mr-8">
+            <img className="rounded w-8 h-8" src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="" />
+
+                  {/* Profile Links */}
+                  <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white ">
+                    <ul className="space-y-2  ">
+                      {OpenLinks.map((data, index) => (
+                        <li>
+                          <a
+                            className="text-gray-500  dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                            href={data.link}
+                          >
+                            {data.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+         
           </div>
         </div>
       </div>

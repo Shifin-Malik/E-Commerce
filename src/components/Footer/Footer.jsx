@@ -32,29 +32,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 pb-20 pt-5">
           {/* company details */}
-          <div className="py-8 px-4">
-            <a
-              href="#"
-              className="text-primary font-semibold tracking-widest text-2xl uppercase sm:text-3xl
-"
-            >
-              Eshop
-            </a>
-            <p className="text-gray-600 dark:text-white/70  lg:pr-24 pt-3">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-              alias cum
-            </p>
-            <p className="text-gray-500 mt-4">
-              Made with 💖 by The Coding Journey
-            </p>
-            <a
-              href="https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ"
-              target="_blank"
-              className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
-            >
-              Visit our YouTube Channel
-            </a>
-          </div>
+         
 
           {/* Footer links */}
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">

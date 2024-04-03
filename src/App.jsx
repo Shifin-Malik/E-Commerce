@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Category from "./components/Category/Category";
 import Category2 from "./components/Category/Category2";
+import Category3 from "./components/Category/category3.jsx";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Partners from "./components/Partners/Partners.jsx";
@@ -63,6 +64,7 @@ const App = () => {
       <Hero handleOrderPopup={handleOrderPopup} />
       <Category />
       <Category2 />
+      <Category3 />
       <Services />
       <Banner data={BannerData} />
       <Products />

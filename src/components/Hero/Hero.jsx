@@ -37,7 +37,7 @@ const Hero = ({ handleOrderPopup }) => {
     speed: 800,
     slidesToScroll: 1,
     // autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
     pauseOnFocus: true,

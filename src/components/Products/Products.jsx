@@ -10,6 +10,9 @@ import Img4 from "../../assets/product/p-4.jpg";
 import Img5 from "../../assets/product/p-5.jpg";
 import Img6 from "../../assets/product/p-9.jpg";
 import Img7 from "../../assets/product/p-7.jpg";
+import Img8 from "../../assets/product/headset1010.webp";
+import Img9 from "../../assets/product/img12.jpeg";
+
 
 const ProductsData = [
   {
@@ -40,6 +43,7 @@ const ProductsData = [
     price: "220",
     aosDelay: "600",
   },
+  
 ];
 const ProductsData2 = [
   {
@@ -70,6 +74,21 @@ const ProductsData2 = [
     price: "220",
     aosDelay: "600",
   },
+  {
+    id: 5,
+    img: Img8,
+    title: " ",
+    price: "400",
+    aosDelay: "700",
+  },
+  {
+    id: 6,
+    img: Img9,
+    title: " ",
+    price: "400",
+    aosDelay: "700",
+  },
+  
 ];
 const Products = () => {
   return (
